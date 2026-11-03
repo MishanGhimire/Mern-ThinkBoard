@@ -1,0 +1,21 @@
+{
+  "name": "mern-thinkboard",
+  "version": "1.0.0",
+  "description": "A modern full-stack note-taking application built using the MERN stack (MongoDB, Express, React, Node.js), styled with TailwindCSS & DaisyUI, and rate-limited via Upstash Redis.",
+  "main": "index.js",
+  "scripts": {
+    "build": "npm install --prefix backend && npm install --prefix frontend && npm run build --prefix frontend",
+    "start": "npm run start --prefix backend"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MishanGhimire/Mern-ThinkBoard.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MishanGhimire/Mern-ThinkBoard/issues"
+  },
+  "homepage": "https://github.com/MishanGhimire/Mern-ThinkBoard#readme"
+}
