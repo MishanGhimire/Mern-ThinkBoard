@@ -1,6 +1,24 @@
 # 📝 MERN Stack Note Taking App (ThinkBoard)
 
-A modern full-stack note-taking application built using the MERN stack (MongoDB, Express, React, Node.js), styled with TailwindCSS & DaisyUI, and rate-limited via Upstash Redis.
+A modern full-stack note-taking application built with the MERN stack (MongoDB, Express, React, Node.js), styled with TailwindCSS & DaisyUI, and rate-limited via Upstash Redis.
+
+---
+
+## 🚀 Features
+
+- **Full CRUD Operations**: Create, view, edit, and delete notes in real time.
+- **Rate Limiting**: Protects backend APIs using **Upstash Redis** sliding window rate limiter.
+- **Responsive & Modern UI**: Built with React, Tailwind CSS, Lucide icons, and DaisyUI themes.
+- **Toasts & Feedback**: User-friendly alerts and notifications powered by `react-hot-toast`.
+- **Production Ready**: Configured for single-command root build and static frontend serving in production.
+
+---
+
+## 🛠️ Tech Stack
+
+- **Frontend**: React (Vite), React Router, TailwindCSS, DaisyUI, Lucide React, Axios, React Hot Toast
+- **Backend**: Node.js, Express.js, MongoDB (Mongoose), CORS, Dotenv
+- **Security & Rate Limiting**: Upstash Redis (`@upstash/ratelimit`, `@upstash/redis`)
 
 ---
 
@@ -8,7 +26,7 @@ A modern full-stack note-taking application built using the MERN stack (MongoDB,
 
 ### Backend (`/backend/.env`)
 
-Create a `.env` file inside the `backend` folder and add the following:
+Create a `.env` file inside the `backend` directory:
 
 ```env
 PORT=5001
@@ -22,34 +40,34 @@ NODE_ENV=development
 
 ---
 
-## 🔧 Run the Backend
+## 🔧 Local Development
 
+### 1. Run the Backend
 ```bash
 cd backend
 npm install
 npm run dev
 ```
+Backend runs at `http://localhost:5001`.
 
-The backend server runs on `http://localhost:5001`.
-
----
-
-## 💻 Run the Frontend
-
+### 2. Run the Frontend
 ```bash
 cd frontend
 npm install
 npm run dev
 ```
-
-The frontend application runs on `http://localhost:5173`.
+Frontend runs at `http://localhost:5173`.
 
 ---
 
-## 🚀 Features
+## 🌐 Production Build & Deployment
 
-- **CRUD Operations**: Create, read, update, and delete notes.
-- **Rate Limiting**: Protected endpoints using Upstash Redis.
-- **Modern UI**: Styled with Tailwind CSS and DaisyUI.
-- **Toasts & Feedback**: Interactive notifications using `react-hot-toast`.
+From the root directory:
 
+```bash
+# Install dependencies for both frontend & backend, and build frontend
+npm run build
+
+# Start the production backend server
+npm start
+```
